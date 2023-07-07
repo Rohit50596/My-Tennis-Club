@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        {% extends "master.html" %}
+        {% block title %}
+            Details About {{mymember.firstname}} {{mymember.lastname}} 
+        {% endblock %}
+
+        {%block content %}
+        <div class="mycard">
+        <h1>{{ mymember.firstname}} {{mymember.lastname}}</h1>
+        <p>phone: {{mymember.phone}}</p>
+        </div>
+        {% endblock %}
+    </body>
+</html>

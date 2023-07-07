@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        {% extends "master.html" %}
+        {% block title %}
+            My Tennis CLub - List of all members
+        {% endblock %}
+
+        {%block content %}
+        <div class="mycard">
+        <h1>Members</h1>
+        <ul>
+            {% for x in mymembers %}
+              <li><a href="details/{{x.id}}">{{x.firstname}} {{x.lastname}}</a></li>
+           
+            {% endfor %}
+        </ul>
+        </div>
+        {% endblock %}
+    </body>
+</html>
